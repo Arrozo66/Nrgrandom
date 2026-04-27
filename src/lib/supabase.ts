@@ -51,7 +51,7 @@ export async function insertCharacter(character: CharacterData): Promise<Charact
     data: character,
   })
   .select()
-  .single()
+  .maybesingle()
 
   if (error) {
     console.error('[Supabase] insertCharacter error:', error.message)
